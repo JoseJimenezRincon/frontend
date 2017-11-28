@@ -49,8 +49,10 @@ class Main extends Component {
     }
 
     render() {
+        let total = 0;
         let filas = this.state.conceptos.map((concepto) => {
             if ( concepto.nombre.includes(this.state.busqueda) ){
+                total += parseInt(concepto.cantidad);
                 return (
                     <tr>
                         <td>{concepto.nombre}</td>
@@ -74,6 +76,7 @@ class Main extends Component {
                         {filas}
                     </tbody>
                 </table>
+                <h2>Total: { total }</h2>
                 <br />
                 <h2>Concepto</h2>
                 <input name="iConcepto" type="text" onChange={this.onHandleChange} value={this.state.form.nombre}
