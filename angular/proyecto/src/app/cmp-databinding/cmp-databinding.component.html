@@ -1,0 +1,10 @@
+<h1>Data Binding</h1>
+<h2>String Interpolation</h2>
+<p>Me llamo {{nombre}}</p>
+<h2>Property Binding</h2>
+<input type="text" [disabled]="!activo">
+<p [ngStyle]="{'color':'blue'}">Un texto azul</p>
+<p>Mi color favorito es el: {{num}}</p>
+
+<h2>Event Binding</h2>
+<button type="button" (click)="cambiaActivo()">Click</button>
