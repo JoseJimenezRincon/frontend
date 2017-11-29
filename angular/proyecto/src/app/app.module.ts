@@ -17,6 +17,11 @@ import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
 import { DatosService } from './cmp-servicios/datos.service';
 import { CmpFormularioComponent } from './cmp-formulario/cmp-formulario.component';
+import { CmpObservablesComponent } from './cmp-observables/cmp-observables.component';
+import { UsuarioComponent } from './cmp-observables/usuario/usuario.component';
+import { HomeComponent } from './cmp-observables/home/home.component';
+import { Routing } from './cmp-observables/app.routing';
+import { UsuarioService } from './cmp-observables/usuario.service';
 
 @NgModule({
   declarations: [
@@ -32,14 +37,19 @@ import { CmpFormularioComponent } from './cmp-formulario/cmp-formulario.componen
     CmpServiciosComponent,
     CmpAComponent,
     CmpBComponent,
-    CmpFormularioComponent
+    CmpFormularioComponent,
+    CmpObservablesComponent,
+    UsuarioComponent,
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
-  providers: [LogService, DatosService],
+  providers: [LogService, DatosService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
