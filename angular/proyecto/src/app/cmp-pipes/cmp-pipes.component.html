@@ -1,0 +1,24 @@
+<h1>Pipes</h1>
+<p>{{texto}}</p>
+<p>{{texto | uppercase}}</p>
+<p>{{texto | slice:3:5}}</p>
+
+<p>{{ fecha }}</p>
+<p>{{ fecha | date }}</p>
+<p>{{ fecha | date:'dd/MM/yyyy' }}</p>
+
+<p>{{ num }}</p>
+<p>{{ num | currency: 'EUR'}}</p>
+<p>{{ num | number:'.21' }}</p>
+<p>{{ num | doble:5 }}</p>
+
+<p>{{texto}}</p>
+<p>{{texto | inversa}}</p>
+<p>{{texto | palabrota:['Winter']}}</p>
+
+<ul>
+  <li *ngFor="let mascota of mascotas | impuro:'r'">{{mascota}}</li>
+</ul>
+
+<input type="text" #input>
+<button type="button" (click)="addMascota(input.value)">Añadir</button>

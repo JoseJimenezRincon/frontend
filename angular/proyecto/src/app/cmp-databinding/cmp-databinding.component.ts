@@ -10,7 +10,12 @@ export class CmpDatabindingComponent implements OnInit {
   nombre = "Jose";
   activo = false;
   @Input() num = 3;
-  @Output() miEvento = new EventEmitter<string>();
+  @Output('clicado') miEvento = new EventEmitter<string>();
+
+  usuario = {
+    nombre: 'AkanThor',
+    apellidos: 'Hunter'
+  };
 
   constructor() { }
 
@@ -18,6 +23,7 @@ export class CmpDatabindingComponent implements OnInit {
   }
 
   cambiaActivo(){
+    this.usuario.nombre += '-';
     this.activo = !this.activo;
     this.miEvento.emit(this.activo?'activo':'inactivo');
   }

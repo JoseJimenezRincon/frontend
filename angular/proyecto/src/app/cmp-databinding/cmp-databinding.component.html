@@ -8,3 +8,8 @@
 
 <h2>Event Binding</h2>
 <button type="button" (click)="cambiaActivo()">Click</button>
+
+<h2>Two way DataBinding</h2>
+<p>{{usuario.nombre}}  {{usuario.apellidos}}</p>
+<input type="text"[(ngModel)]="usuario.nombre" />
+<input type="text"[(ngModel)]="usuario.apellidos" />

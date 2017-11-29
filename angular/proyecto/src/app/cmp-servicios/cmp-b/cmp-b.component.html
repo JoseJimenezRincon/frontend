@@ -1,0 +1,8 @@
+<h2>Componente B</h2>
+<input type="text" #input/>
+<ul>
+  <li *ngFor="let dato of this.datos">{{dato}}</li>
+</ul>
+<button type="button" (click)="guardar(input.value)">Guardar</button>
+
+<p>Dato Recibido: {{ datoRecibido }}</p>

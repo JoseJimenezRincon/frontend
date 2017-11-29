@@ -1,0 +1,19 @@
+<h1>Directivas</h1>
+
+<h2>Directivas Atributo</h2>
+<p [appCmpDirectives]="'purple'">Un texto marcado</p>
+
+<h2>Directivas Estructurales</h2>
+<ul>
+  <li *ngFor="let num of numeros; let pos = index">Número: {{num}} Posicion: {{pos}}</li>
+</ul>
+
+<p [appCmpDirectives] *ngIf="mostrar">Se muestra</p>
+
+<input type="text" #mascota (input)="0" />
+<div [ngSwitch]="mascota.value">
+  <p *ngSwitchCase="'perro'">Tengo un perro</p>
+  <p *ngSwitchCase="'gato'">Tengo un gato </p>
+  <p *ngSwitchCase="'canario'">Tengo un canario</p>
+  <p *ngSwitchDefault> No tengo de ná</p>
+</div>
